@@ -1,0 +1,20 @@
+version : '3'
+
+services:
+  koob-test_prod:
+    build: 
+      context: .
+      dockerfile: dockerfile.prod
+    ports:
+    - 3000:3000
+    volumes:
+    - .:/home/node/app
+  
+  db_prod:
+    image: bitnami/mongodb:5.0.17
+
+    environment:
+      MONGODB_ROOT_PASSWORD: root
+      MONGODB_REPLICA_SET_MODE: primary
+      MONGODB_REPLICA_SET_KEY: 123456
+      MONGODB_DATABASE: nest

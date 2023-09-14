@@ -1,0 +1,62 @@
+###
+GET http://localhost:3000/users
+
+
+###
+GET http://localhost:3000/users/65035c4b9197a93d50c5e968
+
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "teste",
+    "email": "teste@gmail.com",
+    "biography": "teste bio",
+    "birthdayDate": "1111-11-11T11:11:11.111Z"
+}
+
+###
+PUT http://localhost:3000/users/650349daae7c26a1ba24c152
+Content-Type: application/json
+
+{
+    "name": "testeEdit",
+    "email": "teste@gmail.com",
+    "biography": "teste bio",
+    "birthdayDate": "1111-11-11T11:11:11.111Z"
+}
+
+###
+DELETE http://localhost:3000/users/6503483df6c877427ddeebff
+
+//-------------------posts api----------------------------
+
+###
+GET http://localhost:3000/posts
+
+
+###
+GET http://localhost:3000/posts/6503544b112f3bde8d2c89c8
+
+
+###
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+    "content": "content post",
+    "userId": "65035c4b9197a93d50c5e968"
+}
+
+###
+PUT http://localhost:3000/posts/65035fd9697d9f27d7e2ecf9
+Content-Type: application/json
+
+{
+    "content": "content EDIT post"
+}
+
+###
+DELETE http://localhost:3000/posts/6503544b112f3bde8d2c89c8
