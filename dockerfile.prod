@@ -8,6 +8,8 @@ RUN mkdir -p /home/node/app
 
 WORKDIR /home/node/app
 
+COPY prisma ./prisma
+
 COPY --chown=node:node . .
 
 RUN npm install

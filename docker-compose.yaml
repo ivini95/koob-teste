@@ -3,12 +3,12 @@ version : '3'
 services:
   koob-test:
     build: 
-      context: /koob-test
+      context: .
       dockerfile: dockerfile.dev
     ports:
     - 3000:3000
     volumes:
-    - /koob-test:/home/node/app
+    - .:/home/node/app
   
   db:
     image: bitnami/mongodb:5.0.17
