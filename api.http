@@ -62,7 +62,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTA0NzljY
 }
 
 ###
-DELETE http://localhost:3000/posts/65048ed323b1ce1182e49290
+DELETE http://localhost:3000/posts/65047dcd74a4a5e71f680ba0
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTA0NzljYzU0OWFkYTdiMzU3ZjY2YzMiLCJ1c2VybmFtZSI6InRlc3RlRWRpdCIsImlhdCI6MTY5NDc5NzU2MiwiZXhwIjoxNjk0Nzk3NjIyfQ.xhcOkceo8GmyAdo0w7wkNSy9dsB2GCInExbOQWOC5Nw
 
 //-------------------------------login---------------------

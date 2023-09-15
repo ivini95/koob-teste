@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { PrismaService } from 'src/prisma/prisma/prisma.service';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class UsersService {
@@ -14,7 +15,7 @@ export class UsersService {
         email: createUserDto.email,
         biography: createUserDto.biography,
         birthdayDate: createUserDto.birthdayDate,
-        password: createUserDto.password,
+        password: bcrypt.hashSync(createUserDto.password, 8),
       },
     });
   }
@@ -48,7 +49,20 @@ export class UsersService {
     });
   }
 
-  remove(id: string) {
+  async remove(id: string) {
+    const user = await this.prismaService.user.findUnique({
+      where: { id },
+      include: { posts: true },
+    });
+
+    if (!user) {
+      throw new Error(`User with id ${id} not found`);
+    }
+
+    for (const post of user.posts) {
+      await this.prismaService.post.delete({ where: { id: post.id } });
+    }
+
     return this.prismaService.user.delete({
       where: {
         id,
