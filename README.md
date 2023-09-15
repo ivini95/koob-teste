@@ -8,6 +8,7 @@ DATABASE_URL="mongodb://root:root@db:27017/nest?authSource=admin"
 
 2 - executar > docker compose up
 
-3 - executar >docker compose exec koob-test bash
+3 - executar > docker compose exec koob-test bash
 
+4 - executar > npm run start:dev
 -----------------------------------------------------
