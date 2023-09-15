@@ -14,7 +14,8 @@ Content-Type: application/json
     "name": "teste",
     "email": "teste@gmail.com",
     "biography": "teste bio",
-    "birthdayDate": "1111-11-11T11:11:11.111Z"
+    "birthdayDate": "1111-11-11T11:11:11.111Z",
+    "password": "teste1234"
 }
 
 ###
@@ -47,7 +48,7 @@ Content-Type: application/json
 
 {
     "content": "content post",
-    "userId": "65035c4b9197a93d50c5e968"
+    "userId": "650479cc549ada7b357f66c3"
 }
 
 ###
@@ -60,3 +61,16 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3000/posts/6503544b112f3bde8d2c89c8
+
+
+//-------------------------------login---------------------
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "name": "teste", 
+    "password": "teste1234",
+    "access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+}

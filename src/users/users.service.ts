@@ -14,6 +14,7 @@ export class UsersService {
         email: createUserDto.email,
         biography: createUserDto.biography,
         birthdayDate: createUserDto.birthdayDate,
+        password: createUserDto.password,
       },
     });
   }
