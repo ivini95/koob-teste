@@ -50,14 +50,10 @@ export class UsersService {
   }
 
   async remove(id: string) {
-    const user = await this.prismaService.user.findUnique({
+    const user = await this.prismaService.user.findUniqueOrThrow({
       where: { id },
       include: { posts: true },
     });
-
-    if (!user) {
-      throw new Error(`User with id ${id} not found`);
-    }
 
     for (const post of user.posts) {
       await this.prismaService.post.delete({ where: { id: post.id } });

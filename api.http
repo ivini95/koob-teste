@@ -3,7 +3,7 @@ GET http://localhost:3000/users
 
 
 ###
-GET http://localhost:3000/users/650479cc549ada7b357f66c3
+GET http://localhost:3000/users/6504a5ddae638295ab82e981
 
 
 ###
@@ -30,7 +30,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/users/650479cc549ada7b357f66c3
+DELETE http://localhost:3000/users/6504a5ddae638295ab82e991
 
 //-------------------posts api----------------------------
 
@@ -39,31 +39,31 @@ GET http://localhost:3000/posts
 
 
 ###
-GET http://localhost:3000/posts/65047dcd74a4a5e71f680ba0
+GET http://localhost:3000/posts/6504a89853dffcd0a88dbddf
 
 
 ###
 POST http://localhost:3000/posts
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTA0NzljYzU0OWFkYTdiMzU3ZjY2YzMiLCJ1c2VybmFtZSI6InRlc3RlRWRpdCIsImlhdCI6MTY5NDc5NzQ4OCwiZXhwIjoxNjk0Nzk3NTQ4fQ.y1W37QITfRLRgijkEO0v3oQZRGDDMdit1hoye-569S4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTA0YjUyMjc4NWY2ZjM4M2Y2MGFiZTAiLCJ1c2VybmFtZSI6InRlc3RlIiwiaWF0IjoxNjk0ODA3MzQyLCJleHAiOjE2OTQ4MDc0MDJ9.tO80mXKW3SJgXR4A38q8kZrfcadzr__SGD1BbYd8pjM
 
 {
     "content": "content post",
-    "userId": "650479cc549ada7b357f66c3"
+    "userId": "6504b522785f6f383f60abe0"
 }
 
 ###
-PUT http://localhost:3000/posts/65048ed323b1ce1182e49290
+PUT http://localhost:3000/posts/6504a89853dffcd0a88dbedf
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTA0NzljYzU0OWFkYTdiMzU3ZjY2YzMiLCJ1c2VybmFtZSI6InRlc3RlRWRpdCIsImlhdCI6MTY5NDc5NzQ4OCwiZXhwIjoxNjk0Nzk3NTQ4fQ.y1W37QITfRLRgijkEO0v3oQZRGDDMdit1hoye-569S4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTA0YTVkZGFlNjM4Mjk1YWI4MmU5OTEiLCJ1c2VybmFtZSI6InRlc3RlIiwiaWF0IjoxNjk0ODA2ODUyLCJleHAiOjE2OTQ4MDY5MTJ9.1UmbloS9AMc4yU3jxxuAmA3Kz2QBaxXOM2bN2mIGz1M
 
 {
     "content": "content EDIT post"
 }
 
 ###
-DELETE http://localhost:3000/posts/65047dcd74a4a5e71f680ba0
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTA0NzljYzU0OWFkYTdiMzU3ZjY2YzMiLCJ1c2VybmFtZSI6InRlc3RlRWRpdCIsImlhdCI6MTY5NDc5NzU2MiwiZXhwIjoxNjk0Nzk3NjIyfQ.xhcOkceo8GmyAdo0w7wkNSy9dsB2GCInExbOQWOC5Nw
+DELETE http://localhost:3000/posts/6504b560785f6f383f60abe1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTA0YjUyMjc4NWY2ZjM4M2Y2MGFiZTAiLCJ1c2VybmFtZSI6InRlc3RlIiwiaWF0IjoxNjk0ODA3NDA1LCJleHAiOjE2OTQ4MDc0NjV9.vOgCQEWR5z17wLSCkMnfTuMVUz3jAVeurqai7zMJ99Q
 
 //-------------------------------login---------------------
 
@@ -73,6 +73,6 @@ Content-Type: application/json
 
 {
     "name": "teste", 
-    "password": "teste1234",
+    "password": "$2b$08$y/FryI0Wn7.Gj3L6bCAEoeckgzlKwRRT3Q3af5EU/yt5odhNBksLe",
     "access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
 }
